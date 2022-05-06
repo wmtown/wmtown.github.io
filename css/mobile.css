@@ -1,0 +1,101 @@
+*{
+    color: white ;
+}
+body{
+    background: url("/img/yee_6_mobile.png") !important;
+    opacity: 0;
+    background-size: cover;
+}
+body.show{
+    animation: opacity_show 2s;
+    opacity: 1;
+}
+.content{
+    transition: all 1s;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    opacity: 1;
+}
+.content.hide{
+    opacity: 0;
+    z-index: -1;
+}
+.text-light{
+    text-shadow: 0px 0px 50px white;
+}
+.title *{
+    display: inline-block;
+    margin: 3px;
+    padding: 3px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title h1{
+    font-size: 50px;
+}
+.itembox{
+    box-shadow: 0px 0px 20px white !important;
+    color: black;
+    margin: 10px !important;
+}
+.itembox.but{
+    padding: 10px !important;
+    font-weight: 700;
+}
+.itembox.but:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+@keyframes opacity_show {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@-webkit-keyframes opacity_show {
+    from{
+        opacity: 0 !important;
+    }
+    to{
+        opacity: 1 !important;
+    }
+}
+#menu{
+    transition: all 1s;
+    transform: translateY(-100%);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    padding: 10px;
+    z-index: 999;
+    padding-top: 20px;
+}
+body.show #menu{
+    transform: translateY(0%);
+}
+#menu *{
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+#menu .item,#menu .logo{
+    background-color: rgba(255, 255, 255, 0);
+    font-size: medium;
+}
+#menu .item:hover,#menu .logo:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 8px white;
+}
